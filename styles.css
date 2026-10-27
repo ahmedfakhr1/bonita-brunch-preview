@@ -139,3 +139,13 @@ footer .credit{font-size:16px}
 .items li::before{display:none}
 .items li{grid-template-columns:1fr}
 .items em{display:block;margin-top:4px}
+
+.frame{aspect-ratio:1;border-radius:50%;overflow:hidden;position:relative;background:var(--step)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:cf 18s infinite}
+.frame img:first-child{opacity:1}
+@keyframes cf{0%{opacity:0}3%{opacity:1}17%{opacity:1}20%{opacity:0}100%{opacity:0}}
+.caps{position:relative;height:28px;margin-top:var(--s2);text-align:center;color:var(--soft)}
+.caps span{position:absolute;inset:0;opacity:0;animation:cf 18s infinite}
+.cl{display:flex;align-items:center;gap:20px}
+.cphoto{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:none}
+@media (prefers-reduced-motion:reduce){.frame img,.caps span{animation:none}.frame img:not(:first-child){display:none}.caps span:not(:first-child){display:none}.caps span:first-child{opacity:1}}
