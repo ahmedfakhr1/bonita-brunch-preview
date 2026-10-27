@@ -149,3 +149,18 @@ footer .credit{font-size:16px}
 .cl{display:flex;align-items:center;gap:20px}
 .cphoto{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:none}
 @media (prefers-reduced-motion:reduce){.frame img,.caps span{animation:none}.frame img:not(:first-child){display:none}.caps span:not(:first-child){display:none}.caps span:first-child{opacity:1}}
+
+@media (max-width:900px){
+  .hero{display:block;min-height:0;padding:var(--s4) var(--m) 0}
+  .hero .copy{padding-left:0}
+  .disc{position:relative;left:auto;top:auto;bottom:auto;transform:none;width:130vw;height:130vw;margin:var(--s4) 0 -78vw -15vw;animation-name:open-m}
+  .disc img{left:27%;top:20%;width:46%}
+}
+@keyframes open-m{from{clip-path:circle(0% at 50% 0%)}to{clip-path:circle(150% at 50% 0%)}}
+@media (min-width:901px) and (max-width:1200px){
+  .hero{display:block;min-height:0;padding:var(--s4) var(--m) 0}
+  .hero .copy{width:100%;padding-left:0}
+  .hero h1{font-size:8vw}
+  .disc{position:relative;left:auto;top:auto;bottom:auto;transform:none;width:110vw;height:110vw;margin:var(--s4) 0 -62vw -5vw;animation-name:open-m}
+  .disc img{left:27%;top:20%;width:46%}
+}
